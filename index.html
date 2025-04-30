@@ -7,7 +7,7 @@
     <body>
 		<h1 id="result" style="text-align: center; font-size: 4em; color: white">lngi</h1>
 		<script>
-		let t = 1;
+		let t = 2;
 		function scientific(a, b)
 {
 	b = Math.floor(b)
@@ -64,7 +64,7 @@
 	return E
 }
 		setInterval(_=>{
-			document.getElementById('result').textContent = scientific((9**(t%1))+1,2)
+			document.getElementById('result').textContent = scientific((9**(t%1))+1,Math.floor(t))
 			t += 0.00001 + Math.sqrt(t)/100000
         },0)
 		</script>
