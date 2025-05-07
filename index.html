@@ -6,6 +6,7 @@
 	</head>
     <body>
 		<h1 id="result" style="text-align: center; font-size: 2em; color: white">lngi</h1>
+                <input type="number" id="speed" value="1">
 		<script>
 		let t = 2;
 		function scientific(a, b)
@@ -65,7 +66,7 @@
 }
 		setInterval(_=>{
 			document.getElementById('result').textContent = scientific((9**(t%1))+1,Math.floor(t))
-			t += 0.00001 + Math.sqrt(t)/100000
+			t += (document.getElementById("speed").value*0.00001) + Math.sqrt(t)/100000
         },0)
 		</script>
 	</body>
