@@ -67,6 +67,7 @@
 		setInterval(_=>{
 			document.getElementById('result').textContent = scientific((9**(t%1))+1,Math.floor(t))
 			t += document.getElementById("speed").value*(0.00001 + Math.sqrt(t)/100000)
+			t = Math.max(2,t)
         },0)
 		</script>
 	</body>
